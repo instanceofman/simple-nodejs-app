@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
+const os = require("os");
+const hostname = os.hostname();
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello World! I'm " + hostname);
 });
 
 app.get("/health", (req, res) => {
