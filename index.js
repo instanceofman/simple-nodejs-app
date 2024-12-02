@@ -5,7 +5,7 @@ const os = require("os");
 const hostname = os.hostname();
 
 app.get("/", (req, res) => {
-  res.send("Hello V2! I'm " + hostname + " | " + process.env.CONTAINER_NAME);
+  res.send("Hello V3! I'm " + hostname + " | " + process.env.CONTAINER_NAME);
 });
 
 app.get("/health", (req, res) => {
